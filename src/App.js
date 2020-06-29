@@ -203,6 +203,7 @@ export default function App() {
           }}
         />
 
+
         <Route
           exact
           path="/404"
@@ -264,7 +265,7 @@ export default function App() {
 
         {/* ADMIN ROUTES */}
         {/* Admin Dashboard */}
-        <Route
+        {/* <Route
           exact
           path="/admin/dashboard"
           name="adminDashboard"
@@ -273,7 +274,7 @@ export default function App() {
               return <AdminDashboard {...props} />;
             else return <Redirect to="/signin" />;
           }}
-        />
+        /> */}
         {/* Userlist for admin */}
         <Route
           exact
