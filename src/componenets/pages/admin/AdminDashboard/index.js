@@ -7,8 +7,10 @@ import AdminFooter from "../../../partials/admin/containers/Footer";
 import Loading from "../../../partials/admin/containers/Loading";
 import Alert from "../../../partials/admin/containers/Alert";
 import "../../../partials/admin/assets/css/style.css";
-import loading01 from '../../../partials/admin/assets/images/loading01.svg';
-import loading02 from '../../../partials/admin/assets/images/loading02.svg';
+import loading01 from "../../../partials/admin/assets/images/loading01.svg";
+import loading02 from "../../../partials/admin/assets/images/loading02.svg";
+import TotalPayments from "../../../partials/admin/containers/TotalPayments";
+import ChargeWallet from "../../../partials/admin/containers/AdminUpdateAlert/ChargeWallet";
 
 export default function Admin() {
   const [usersData, setUsersData] = useState([]);
@@ -36,9 +38,15 @@ export default function Admin() {
     <div>
       <AdminHeader />
       <AdminMenue />
-      <main className="red"> 
-      <Loading></Loading>
+      <main>
+        <Loading></Loading>
         <Alert></Alert>
+        <TotalPayments></TotalPayments>
+        <ChargeWallet
+          title="شارژ کیف پول"
+          info="لطفا مبلغ مورد نظر خود را به تومان  وارد نمائید"
+          btn_text=" شارژ کیف پول من"
+        ></ChargeWallet>
       </main>
       <AdminFooter />
     </div>
